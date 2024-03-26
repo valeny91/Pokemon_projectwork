@@ -13,15 +13,7 @@ import CardList from "./Components/Card/CardList";
 function App() {
   return (
     <div className="d-flex justify-content-center items">
-      <LoginPage />
-      <CardList />
-      <Card
-        pokemon={{
-          id: 0,
-          name: "",
-          images: { small: "url_small_image", large: "url_large_image" },
-        }}
-      />
+      <LoginPage /> 
     </div>
   );
 }

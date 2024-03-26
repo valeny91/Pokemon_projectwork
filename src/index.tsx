@@ -8,6 +8,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import MainPage from "./Pages/MainPage/MainPage";
+import ProductPage from "./Pages/ProductPage/ProductPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     path: "/main-page",
     element: <MainPage />,
   },
+  
 ]);
 
 const root = ReactDOM.createRoot(

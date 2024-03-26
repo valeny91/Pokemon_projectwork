@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import "./Card.css";
 
 interface Pokemon {
@@ -21,7 +21,7 @@ interface CardProps {
   };
 }
 
-const Card: React.FC<CardProps> = ({ pokemon }) => {
+const Card: FC<CardProps> = ({ pokemon }) => {
   return (
     <div className="card">
       <img src={pokemon?.images?.small} alt={pokemon.name} />
