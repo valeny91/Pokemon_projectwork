@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Card.css";
 
 interface Pokemon {
   id: string;
@@ -22,7 +23,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ pokemon }) => {
   return (
-    <div className="card-img">
+    <div className="card">
       <img src={pokemon?.images?.small} alt={pokemon.name} />
       <h3>{pokemon.name}</h3>
     </div>
