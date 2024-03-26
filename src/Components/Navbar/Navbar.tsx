@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Cart from '../Cart/Cart';
+
+
 
 const Navbar = () => {
     return (
@@ -32,7 +34,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <Cart />
+                        <Cart/>
                     </div>
                 </div>
             </nav>
