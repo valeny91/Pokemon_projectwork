@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import Sidebar from '../../Components/Sidebar/Sidebar'
+import Footer from '../../Components/Footer/Footer'
+import './MainPage.css'
 
 const MainPage = () => {
 
@@ -8,12 +10,13 @@ const MainPage = () => {
   
 
   return (
-    <div>
-      <Navbar />
+    <div className='mainPage'>
+      <Navbar/>
+      <div className='main'>
       <Sidebar/>
-
       
-      
+      </div>
+      <Footer/>
     </div>
   )
 }
