@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'remixicon/fonts/remixicon.css'
+import './index.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import MainPage from './Pages/MainPage/MainPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />
+  },
+  {
+    path:"/main-page",
+    element: <MainPage />
+  }
+
+])
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+   <RouterProvider router={router} /> 
   </React.StrictMode>
 );
 
