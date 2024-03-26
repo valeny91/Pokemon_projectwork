@@ -9,7 +9,9 @@ const CardList = () => {
     //effettua la chiamata API
     const fetchData = async () => {
       try {
-        const response = await fetch("https://api.pokemontcg.io/v2/cards");
+        const response = await fetch(
+          "https://api.pokemontcg.io/v2/cards?pageSize=20"
+        );
         if (!response.ok) {
           throw new Error("Errore nella richiesta");
         }
