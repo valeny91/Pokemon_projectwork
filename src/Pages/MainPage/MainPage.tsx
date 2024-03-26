@@ -9,29 +9,30 @@ import Footer from '../../Components/Footer/Footer'
 
 const MainPage = () => {
 
- 
-  
+
+
 
   return (
     <div>
-  
-    <div className='mainPage'>
-      <Navbar/>
-      <div className='main'>
-      <Sidebar/>
+
+      <div className='mainPage'>
+        <Navbar />
+        <div className='main'>
+          <Sidebar />
           <CardList />
-      <Card
-        pokemon={{
-          images: {
-            small: "",
-            large: "",
-          },
-          id: 0,
-          name: "",
-        }}
-      />
+          <Card
+            pokemon={{
+              images: {
+                small: "",
+                large: "",
+              },
+              id: 0,
+              name: "",
+            }}
+          />
+        </div>
+        <Footer />
       </div>
-      <Footer/>
     </div>
   );
 };
