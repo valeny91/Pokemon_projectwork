@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Cart from '../Cart/Cart';
 import './Navbar.css'
+
+
 
 const Navbar = () => {
     return (
@@ -28,7 +30,7 @@ const Navbar = () => {
                             </li>
                             
                         </ul>
-                        <Cart />
+                        <Cart/>
                     </div>
                 </div>
             </nav>
