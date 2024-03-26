@@ -1,13 +1,25 @@
-import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
+
 import CardList from "../../Components/Card/CardList";
 import Card from "../../Components/Card/Card";
 import "./MainPage.css";
+import React, { useState } from 'react'
+import Navbar from '../../Components/Navbar/Navbar'
+import Sidebar from '../../Components/Sidebar/Sidebar'
+import Footer from '../../Components/Footer/Footer'
+
 const MainPage = () => {
+
+ 
+  
+
   return (
     <div>
-      <Navbar />
-      <CardList />
+  
+    <div className='mainPage'>
+      <Navbar/>
+      <div className='main'>
+      <Sidebar/>
+          <CardList />
       <Card
         pokemon={{
           images: {
@@ -18,6 +30,8 @@ const MainPage = () => {
           name: "",
         }}
       />
+      </div>
+      <Footer/>
     </div>
   );
 };
