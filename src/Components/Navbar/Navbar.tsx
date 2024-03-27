@@ -2,8 +2,6 @@ import React, { FC } from 'react';
 import Cart from '../Cart/Cart';
 import './Navbar.css'
 
-
-
 const Navbar = () => {
     return (
         <>

@@ -1,7 +1,6 @@
 import React, { ComponentProps, FC } from 'react'
 interface InputProps extends ComponentProps<'input'> {
   label: string;
-
 }
 const Input: FC<InputProps> = ({ type, label, name }) => {
   return (

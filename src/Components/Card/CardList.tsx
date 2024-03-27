@@ -3,14 +3,14 @@ import Card from "./Card";
 import { Pokemon } from "../../types/Pokemon";
 
 const CardList = () => {
-  const [cards, setCards] = useState<any[]>([]); //salva i dati della chiamata API
+  const [cards, setCards] = useState<Pokemon[]>([]); //salva i dati della chiamata API
 
   useEffect(() => {
     //effettua la chiamata API
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api.pokemontcg.io/v2/cards?pageSize=20"
+          "https://api.pokemontcg.io/v2/cards?pageSize=12"
         );
         if (!response.ok) {
           throw new Error("Errore nella richiesta");

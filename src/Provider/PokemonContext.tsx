@@ -1,4 +1,17 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React from 'react'
+
+const PokemonContext = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default PokemonContext
+
+
+/*import React, { createContext, useState, ReactNode, FC } from "react";
 
 interface Pokemon {
   id: number;
@@ -13,7 +26,7 @@ export const PokemonContext = createContext<PokemonContextType | undefined>(
   undefined
 );
 
-export const PokemonProvider: React.FC<{ children: ReactNode }> = ({
+export const PokemonProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [pokemons] = useState<Pokemon[]>([
@@ -28,4 +41,4 @@ export const PokemonProvider: React.FC<{ children: ReactNode }> = ({
       {children}
     </PokemonContext.Provider>
   );
-};
+};*/

@@ -8,14 +8,14 @@
 .cart-container_tot{
     position: absolute;
     top: 10px;
-    right: 60px;
-    width: 20px;
-    height: 20px;
+    right: 150px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background-color: rgb(255, 67, 67);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }

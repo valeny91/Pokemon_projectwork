@@ -1,15 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import "./Card.css";
 
-interface Pokemon {
-  id: string;
-  name: string;
-  images: {
-    small: string;
-    large: string;
-  };
-}
-
 interface CardProps {
   pokemon: {
     images: {

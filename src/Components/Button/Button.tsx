@@ -4,7 +4,6 @@ interface ButtonProps extends ComponentProps<'button'> {
   
 }
 
-
 const LoginButton: FC<ButtonProps> = (props) => {
   return (
     <>

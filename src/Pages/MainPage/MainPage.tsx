@@ -9,10 +9,8 @@ import Footer from '../../Components/Footer/Footer'
 import ProductPage from "../ProductPage/ProductPage";
 
 const MainPage = () => {
-
   return (
     <div>
-
       <div className='mainPage'>
         <Navbar />
         <div className='main'>
