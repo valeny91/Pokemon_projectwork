@@ -1,0 +1,21 @@
+table {
+    caption-side: top;
+  }
+  
+  .cart {
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+#caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.col item {
+    width: 165px;
+    padding-bottom: 100%;
+}
