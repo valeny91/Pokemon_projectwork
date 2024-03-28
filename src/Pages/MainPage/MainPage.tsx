@@ -7,6 +7,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Footer from '../../Components/Footer/Footer'
 import ProductPage from "../ProductPage/ProductPage";
+import CartDrawer from "../../Components/CartDrawer/CartDrawer";
 
 const MainPage = () => {
   return (
@@ -14,8 +15,9 @@ const MainPage = () => {
       <div className='mainPage'>
         <Navbar />
         <div className='main'>
-          <Sidebar />
-        <ProductPage />
+          <Sidebar/>
+        <ProductPage/>
+       
         </div>
         <Footer />
       </div>

@@ -13,7 +13,7 @@ const CardList = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api.pokemontcg.io/v2/cards?pageSize=12"
+          "https://api.pokemontcg.io/v2/cards?pageSize=100"
         );
         if (!response.ok) {
           throw new Error("Errore nella richiesta");
@@ -28,7 +28,7 @@ const CardList = () => {
     fetchData();
   }, []);
   return (
-    <div className="card-list">
+    <div className="card-list ">
       {cards.map(
         (
           pokemon: Pokemon //indica che stiamo mappando su un array chiamato "cards"
@@ -36,13 +36,13 @@ const CardList = () => {
           <Card
             key={pokemon.id}
             pokemon={pokemon} //passa i valori del pokemon
-           
+
           />
-          
+
         )
-        
+
       )}
-      
+
     </div>
   );
 };

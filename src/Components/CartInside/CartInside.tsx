@@ -1,11 +1,13 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
-import { useAddToCart } from "../../Provider/AddToCartContext";
-import "./CartInside.css";
 
-const CartInside = () => {
-  const { cart } = useAddToCart();
+import React, { FC, useState } from 'react'
+import Navbar from '../Navbar/Navbar'
+import { useAddToCart } from '../../Provider/AddToCartContext'
+import { Pokemon } from '../../types/Pokemon';
 
+const CartInside= () => {
+    const { cart, removeFromCart} = useAddToCart();  
+  
+  ;
   return (
     <>
       <Navbar />
@@ -86,9 +88,9 @@ const CartInside = () => {
                         <span>Modifica</span>
                       </a>
 
-                      <a className="action-remove">
-                        <span>Rimuovi il prodotto</span>
-                      </a>
+                      <button onClick={() => removeFromCart(index)} className="btn btn-danger">
+                        Remove
+                    </button>
                     </div>
                   </td>
                 </tr>
