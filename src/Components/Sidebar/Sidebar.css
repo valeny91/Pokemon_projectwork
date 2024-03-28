@@ -4,11 +4,29 @@
     flex-flow: column;
     align-items: center;
     height: 100%;
- 
     background-color: #f5f5f5;
+    padding: 30px 0px 20px 0;
 } 
 
-.ul-des{
+
+.icon {
+   height: 30px;
+   width: 30px;
+   
+}
+
+
+.linktext{
     color: black;
-    text-decoration: none;
+    font-size: 15px;
+    font-weight: 200;
+    margin: 5px;
+    
+}
+
+.btn-light{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
 }

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Cart from '../Cart/Cart';
 import './Navbar.css'
+import AdminPage from '../../Pages/AdminPage/AdminPage';
 
 const Navbar = () => {
     return (
@@ -26,7 +27,6 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Contacts</a>
                             </li>
-                            
                         </ul>
                         <Cart/>
                     </div>

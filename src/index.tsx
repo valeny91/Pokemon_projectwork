@@ -10,6 +10,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import MainPage from "./Pages/MainPage/MainPage";
 import CartInside from "./Components/CartInside/CartInside";
 import { AddToCartProvider } from "./Provider/AddToCartContext";
+import AdminPage from "./Pages/AdminPage/AdminPage";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path:"/cart-inside",
     element: <CartInside/>
+  }
+  , 
+  {
+    path: "/admin",
+    element: <AdminPage />,
   }
 ]);
 
