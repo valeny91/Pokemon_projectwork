@@ -4,6 +4,7 @@ import { Pokemon } from '../types/Pokemon';
 interface AddToCartContextType {
     cart: Pokemon[];
   addToCart: (pokemon: Pokemon) => void;
+  removeFromCart: (index: number) => void;
 }
 
 const AddToCartContext = createContext<AddToCartContextType | undefined>(undefined);
@@ -27,8 +28,13 @@ export const AddToCartProvider: FC<AddToCartProviderProps> = ({ children }) => {
     setCart(prevCart => [...prevCart, pokemon]);
   };
 
+    const removeFromCart = (index: number) => {
+        const newCart = cart.filter((_, i) => i !== index);
+        setCart(newCart);
+    };
+
   return (
-    <AddToCartContext.Provider value={{ cart, addToCart }}>
+    <AddToCartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </AddToCartContext.Provider>
   );

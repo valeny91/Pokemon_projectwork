@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ pokemon }) => {
 
-  const { addToCart } = useAddToCart(); 
+  const { cart,addToCart } = useAddToCart(); 
 
   const handleAddToCart = () => {
     addToCart(pokemon);
@@ -19,6 +19,12 @@ const Card: FC<CardProps> = ({ pokemon }) => {
         <img src={pokemon?.images?.small} alt={pokemon.name} />
         <h3>{pokemon.name}</h3>
         <p>{pokemon.id}€</p>
+        
+        {
+          cart.includes(pokemon) ? <p className="text-success">Added to Cart</p> : <p className="text-danger">Not Added to Cart</p>
+        }
+
+
         <button onClick={handleAddToCart} className="btn btn-warning">
           Add To Cart
         </button>
