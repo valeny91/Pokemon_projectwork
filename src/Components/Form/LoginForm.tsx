@@ -3,6 +3,7 @@ import LoginButton from '../Button/Button'
 
 import Button from '../Button/Button'
 import Input from '../Input/Input'
+import Checkbox from '../Checkbox/Checkbox'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Form: FC = () => {
@@ -14,7 +15,12 @@ const Form: FC = () => {
     for (const pair of formData.entries()) {
       console.log(pair[0], pair[1]);
     }
-    navigate('/main-page')
+    const isAdminLogin = formData.get('check') === 'on';
+    if(isAdminLogin){
+      navigate('/admin')
+    } else {
+      navigate('/main-page')
+    }
   };
 
 
@@ -35,7 +41,12 @@ const Form: FC = () => {
         </div>
         <br />
         <div className='col-auto'>
+        <Checkbox name='check' type='checkbox' label='Admin' />
+        </div>
+        <br />
+        <div className='col-auto'>
           <Button type='submit' />
+         
         </div>
       </form>
     </div>
