@@ -8,6 +8,8 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import MainPage from "./Pages/MainPage/MainPage";
+import CartInside from "./Components/CartInside/CartInside";
+import { AddToCartProvider } from "./Provider/AddToCartContext";
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
     path: "/main-page",
     element: <MainPage />,
   },
+  {
+    path:"/cart-inside",
+    element: <CartInside/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(
@@ -26,7 +32,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <AddToCartProvider>
     <RouterProvider router={router} />
+    </AddToCartProvider>
   </React.StrictMode>
 );
 

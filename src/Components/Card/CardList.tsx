@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { Pokemon } from "../../types/Pokemon";
+import { buffer } from "stream/consumers";
+
+
 
 const CardList = () => {
   const [cards, setCards] = useState<Pokemon[]>([]); //salva i dati della chiamata API
@@ -33,9 +36,13 @@ const CardList = () => {
           <Card
             key={pokemon.id}
             pokemon={pokemon} //passa i valori del pokemon
+           
           />
+          
         )
+        
       )}
+      
     </div>
   );
 };

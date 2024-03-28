@@ -1,24 +1,22 @@
 import React, { FC, useState } from 'react'
 import './Cart.css'
+import { Link } from 'react-router-dom';
+import { useAddToCart } from '../../Provider/AddToCartContext';
+import { Pokemon } from '../../types/Pokemon';
 
 
 const Cart = () => {
-    const [cart, setCart] = useState([{}]);
-
-    const updateCart = (id: number) => {
-        setCart((cart) => [...cart, { id, quantity: 1 }]);
-        console.log(cart);
-    }
+    const {cart} = useAddToCart();
+   
 
     return (
         <div className=" mx-5">
-            <a href="#"><i className="ri-shopping-cart-line cart"></i></a>
+            <Link to="/cart-inside">
+            <i className="ri-shopping-cart-line cart"></i>
+            </Link>
             <div>
-                <button onClick={() => updateCart(1)}>id 1</button>
-                <button onClick={() => updateCart(2)}>id 2</button>
-                <button onClick={() => updateCart(3)}>id 3</button>
                 <span className='cart-container_tot'>
-                    {cart.length -1}
+                    {cart.length}
                 </span>
             </div>
         </div>
